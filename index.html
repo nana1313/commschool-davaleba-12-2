@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>davaleba 12</title>
+  </head>
+  <body>
+    <form name="search">
+      search thevisitor :
+      <table id="age-table">
+        <tr>
+          <td>Age:</td>
+          <td id="age-list">
+            <label>
+              <input type="radio" name="age" value="young" />less than 18
+            </label>
+            <label>
+              <input type="radio" name="age" value="mature" />18-50
+            </label>
+            <label>
+              <input type="radio" name="age" value="senior" />more than 50
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Additionally :</td>
+          <td>
+            <input type="text" name="info[0]" />
+            <input type="text" name="info[1]" />
+            <input type="text" name="info[2]" />
+          </td>
+        </tr>
+      </table>
+      <input type="submit" value="Search!" />
+    </form>
+    <script>
+      let ageTable = document.getElementById("age-table");
+      console.log("Table with id='age-table':", ageTable);
+
+      let labelsInTable = ageTable.querySelectorAll("label");
+      console.log("All label elements inside the table:", labelsInTable);
+
+      let firstTdInTable = ageTable.querySelector("td");
+      console.log("First td in the table:", firstTdInTable);
+
+      let searchForm = document.forms["search"];
+      console.log("Form with name 'search':", searchForm);
+
+      let firstInputInForm = searchForm.querySelector("input");
+      console.log("First input in the form:", firstInputInForm);
+
+      let allInputsInForm = searchForm.querySelectorAll("input");
+      let lastInputInForm = allInputsInForm[allInputsInForm.length - 1];
+      console.log("Last input in the form:", lastInputInForm);
+    </script>
+  </body>
+</html>
